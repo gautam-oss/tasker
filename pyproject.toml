@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "tasker"
+version = "0.1.0"
+description = "A simple task management framework with CLI"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.0",
+]
+
+[project.scripts]
+tasker = "tasker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
